@@ -5,6 +5,25 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/blood
 
 local OwO = library:Window("TheoYeuCau")
 
+OwO:Toggle("Venom", false, function(b)
+Venom = b
+end)
+
+spawn(function()
+while wait() do
+if Venom then
+pcall(function()
+local args = {
+    [1] = 1,2,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.Venom.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
 OwO:Toggle("FastATK (FlameSw)", false, function(b)
 FastAttackFlameSword = b
 end)
