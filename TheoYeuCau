@@ -1,0 +1,110 @@
+
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
+
+
+local OwO = library:Window("TheoYeuCau")
+
+OwO:Toggle("FastATK (FlameSw)", false, function(b)
+FastAttackFlameSword = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackFlameSword then
+pcall(function()
+local args = {
+    [1] = 1,2,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.FlameSword.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FastATK (Yoru)", false, function(b)
+FastAttackFlameSword = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackFlameSword then
+pcall(function()
+local args = {
+    [1] = 1,2,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DarkBlade.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FastATK (DiamondSw)", false, function(b)
+FastAttackDMSW = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackDMSW then
+pcall(function()
+local args = {
+    [1] = 1,2,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DiamondSword.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FastATK (DarkSw)", false, function(b)
+FastAttackDMSW = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackDMSW then
+pcall(function()
+local args = {
+    [1] = 1,2,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DarkSwords.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+OwO:Toggle("FastAtk (Yoruv2)", false, function(b)
+FastAttackDB2 = b
+end)
+
+spawn(function()
+while wait() do
+if FastAttackDB2 then
+pcall(function()
+local args = {
+    [1] = 1,
+    [2] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("Players").LocalPlayer.Character.DarkBladeAwake.XaiLaBiBanAcc.RemoteEvent:FireServer(unpack(args))
+end)
+end
+end
+end)
+
+local OwO = library:Window("Misc")
+
+OwO:Button("FlyGui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Reiji0001/Fly-Gui/main/Fly-Gui_Source"))()
+end)
+
+
+OwO:Label("Made by Reiji", Color3.fromRGB(127, 143, 166))
