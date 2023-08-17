@@ -1,0 +1,9 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
+
+local window = library:Window("Fuck Off")
+
+window:Button("Un White Screen", function()
+   _G.WhiteScreen = false
+   wait()
+   library:Destroy()
+end)
