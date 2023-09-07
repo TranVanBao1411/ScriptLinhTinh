@@ -1,5 +1,3 @@
-_G.Color = Color3.fromRGB(18, 222, 11)
-
 local RippleFPS = Instance.new("ScreenGui")
 	local Rippletime = Instance.new("ScreenGui")
 	local Framefps = Instance.new("Frame")
@@ -80,8 +78,8 @@ local RippleFPS = Instance.new("ScreenGui")
 	TextLabeltime.TextColor3 = Color3.fromRGB(255, 255, 255)
 	TextLabeltime.TextSize = 14.000
 	TextLabeltime.TextXAlignment = Enum.TextXAlignment.Left
-	
-	spawn(function()
+
+spawn(function()
 		while wait() do
 			pcall(function()
 				local scripttime=game.Workspace.DistributedGameTime
@@ -117,6 +115,7 @@ local RippleFPS = Instance.new("ScreenGui")
 	ImageLabeltime.Position = UDim2.new(0.083989636, -9, 0.15545856, 0)
 	ImageLabeltime.Size = UDim2.new(0, 29, 0, 29)
 	ImageLabeltime.Image = "rbxassetid://14660700477"
+	
 	
 	Framefps.MouseEnter:Connect(function()
 		TweenService:Create(
@@ -162,7 +161,6 @@ local RippleFPS = Instance.new("ScreenGui")
 			{ImageTransparency = 0}
 		):Play()
 	end)
-	
 	Frametime.MouseEnter:Connect(function()
 		TweenService:Create(
 			Frametime,
@@ -207,107 +205,23 @@ local RippleFPS = Instance.new("ScreenGui")
 			{ImageTransparency = 0}
 		):Play()
 	end)
-	
-	Yedhee.TextTransparency = 1
-		Uitoggle.TextTransparency = 1
-		ToggleImgUi.ImageTransparency = 1
-		ToggleFrameUi.BackgroundTransparency = 1.000
-		SearchStroke.Transparency = 1
-		TweenService:Create(
-			Framefps,
+	TweenService:Create(
+			Frametime,
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{BackgroundTransparency = 1}
 		):Play()
 		TweenService:Create(
-			Strokefps,
+			Stroketime,
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{Transparency = 1}
 		):Play()
 		TweenService:Create(
-			TextLabelfps,
+			TextLabeltime,
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{TextTransparency = 1}
 		):Play()
 		TweenService:Create(
-			ImageLabelfps,
+			ImageLabeltime,
 			TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
 			{ImageTransparency = 1}
 		):Play()
-		
-		UserInputService.InputBegan:Connect(function(input)
-			if input.KeyCode == Enum.KeyCode[yoo] then
-				if uihide == false then
-					ToggleFrameUi:TweenSize(UDim2.new(0, 198, 0, 48),"In","Quad",0.2,true)
-					game:GetService("TweenService"):Create(
-						ToggleFrameUi,
-						TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundTransparency = 0}
-					):Play()
-					Framefps:TweenSize(UDim2.new(0, 193, 0, 44),"In","Quad",0.2,true)
-					TweenService:Create(
-						Framefps,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{BackgroundTransparency = 0}
-					):Play()
-					TweenService:Create(
-						Strokefps,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{Transparency = 0}
-					):Play()
-					TweenService:Create(
-						TextLabelfps,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{TextTransparency = 0}
-					):Play()
-					TweenService:Create(
-						ImageLabelfps,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{ImageTransparency = 0}
-					):Play()
-					Yedhee.TextTransparency = 0
-					Uitoggle.TextTransparency = 0
-					ToggleImgUi.ImageTransparency = 0
-					SearchStroke.Transparency = 0
-					wait(.2)
-					uihide = true
-					Main:TweenSize(UDim2.new(0, 0, 0, 0),"In","Quad",0.4,true)
-				else
-					ToggleFrameUi:TweenSize(UDim2.new(0, 0, 0, 0),"In","Quad",0.2,true)
-					game:GetService("TweenService"):Create(
-						ToggleFrameUi,
-						TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundTransparency = 1}
-					):Play()
-					Framefps:TweenSize(UDim2.new(0, 0, 0, 0),"In","Quad",0.2,true)
-					game:GetService("TweenService"):Create(
-						Framefps,
-						TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-						{BackgroundTransparency = 1}
-					):Play()
-					TweenService:Create(
-						Strokefps,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{Transparency = 1}
-					):Play()
-					TweenService:Create(
-						TextLabelfps,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{TextTransparency = 1}
-					):Play()
-					TweenService:Create(
-						ImageLabelfps,
-						TweenInfo.new(0,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-						{ImageTransparency = 1}
-					):Play()
-					Yedhee.TextTransparency = 1
-					Uitoggle.TextTransparency = 1
-					ToggleImgUi.ImageTransparency = 1
-					SearchStroke.Transparency = 1
-					wait(.2)
-					uihide = false
-					Main:TweenSize(UDim2.new(0, 656, 0, 300),"Out","Quad",0.4,true)
-				end
-			end
-		end)
-		
-	
