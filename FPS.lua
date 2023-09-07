@@ -1,3 +1,5 @@
+_G.Color = Color3.fromRGB(18, 222, 11)
+
 local RippleFPS = Instance.new("ScreenGui")
 	local Rippletime = Instance.new("ScreenGui")
 	local Framefps = Instance.new("Frame")
