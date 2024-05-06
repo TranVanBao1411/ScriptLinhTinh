@@ -10,8 +10,6 @@ t.WaterWaveSpeed = 0
 t.WaterReflectance = 0
 t.WaterTransparency = 0
 l.GlobalShadows = false
-l.FogEnd = 9999
-l.Brightness = 99999
 settings().Rendering.QualityLevel = "Level01"
 for i, v in pairs(g:GetDescendants()) do
 if v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
